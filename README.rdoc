@@ -24,8 +24,8 @@ The cache size is standard 1000 urls, to make it bigger:
   
 == Adding new tiny URL providers
 
-Standard there is a list of about 200 providers. If one is missing, please add it or 
-let me know.
+Standard there is a list of about 200 providers. If one is missing, please add it to
+urlshorteners.txt or let me know by adding a issue.
 
   e = Expurrel.PROVIDERS << 'bit.ly'
 

@@ -4,10 +4,11 @@ Expurrel is a mini library to does tiny url decoding. It supports most of the ti
 providers by doing a request to the tiny url provider and getting back the redirect code. In
 this implementation the urls are cached.
 
-
+== Install
 
 
 == Usage
+  
 
   e = Expurrel.new('http://bit.ly/aanv6P')
   e.decode.should eql('http://www.jaapvandermeer.com/2010/02/12/introducing-myself/')

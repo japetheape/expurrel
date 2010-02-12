@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "expurrel"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Library to decode tiny urls in a efficient way}
+    gem.description = %Q{Expurrel decodes tiny urls in a efficient way.}
     gem.email = "jaapvandermeer@gmail.com"
     gem.homepage = "http://github.com/japetheape/expurrel"
     gem.authors = ["Jaap van der Meer"]

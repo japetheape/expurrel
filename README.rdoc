@@ -1,6 +1,25 @@
-= expurrel
+= Expurrel
 
-Description goes here.
+Expurrel is a mini library to does tiny url decoding. It supports most of the tiny url 
+providers by doing a request to the tiny url provider and getting back the redirect code. In
+this implementation the urls are cached.
+
+
+
+
+== Usage
+
+  e = Expurrel.new('http://bit.ly/aanv6P')
+  e.decode.should eql('http://www.jaapvandermeer.com/2010/02/12/introducing-myself/')
+
+== Notes
+
+The cache size is standard 1000 urls, to make it bigger:
+  
+  Expurrel.cache = SimpleCache.new(:max_size => 10000)
+  
+  
+
 
 == Note on Patches/Pull Requests
  

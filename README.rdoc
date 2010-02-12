@@ -1,17 +1,20 @@
 = Expurrel
 
-Expurrel is a mini library to does tiny url decoding. It supports most of the tiny url 
-providers by doing a request to the tiny url provider and getting back the redirect code. In
-this implementation the urls are cached.
+Expurrel is a library that does short url decoding for each url shortener service. It supports most of the tiny url 
+providers by doing a request to the tiny url provider and getting back the redirect code. Expurrel tries to be fast by also doing
+some simple caching.
 
 == Install
 
+To install expurrel:
+
+  gem install expurrel
 
 == Usage
   
 
   e = Expurrel.new('http://bit.ly/aanv6P')
-  e.decode.should eql('http://www.jaapvandermeer.com/2010/02/12/introducing-myself/')
+  e.decode == 'http://www.jaapvandermeer.com/2010/02/12/introducing-myself/'
 
 == Notes
 
@@ -19,7 +22,25 @@ The cache size is standard 1000 urls, to make it bigger:
   
   Expurrel.cache = SimpleCache.new(:max_size => 10000)
   
-  
+== Adding new tiny URL providers
+
+Standard there is a list of about 200 providers. If one is missing, please add it or 
+let me know.
+
+  e = Expurrel.PROVIDERS << 'bit.ly'
+
+
+== Source
+
+The source is maintained here:
+
+http://github.com/japetheape/expurrel
+
+
+An introductory post is here:
+
+http://www.jaapvandermeer.com/2010/02/13/expurrel-a-library-to-decode-short-urls-in-ruby
+
 
 
 == Note on Patches/Pull Requests

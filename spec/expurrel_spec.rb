@@ -1,10 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "Expurrel" do
-  it "fails" do
-    #fail "hey buddy, you should probably rename this file and start specing for real"
-    1.should eql(1)
-  end
   
   it "should load the text file into a constant" do    
     Expurrel::PROVIDERS.include?('bit.ly').should be true
@@ -21,4 +17,8 @@ describe "Expurrel" do
   end
 
 
+  it "should decode a url from bacn.me" do
+    e = Expurrel.new('http://bacn.me/xg4')
+    e.decode.should eql('http://www.jo.com')
+  end
 end

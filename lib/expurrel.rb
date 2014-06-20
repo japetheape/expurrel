@@ -44,7 +44,7 @@ class Expurrel
   def is_short_domain?(domain)
     PROVIDERS.each do |l|
       # TODO regular expression matching
-      if domain.include?(l)
+      if domain == l
         return true
       end
     end

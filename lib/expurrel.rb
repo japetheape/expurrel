@@ -80,7 +80,7 @@ class Expurrel
     # Trick provided by:
     # http://garrickvanburen.com/archive/how-to-decode-tinyurls-with-ruby
     def reverse_shorturl(tinyurl)
-      Net::HTTP.get_response(URI.parse(tinyurl)).to_hash['location'].to_s
+      Net::HTTP.get_response(URI.parse(tinyurl)).to_hash['location'][0]
     end
     
   end

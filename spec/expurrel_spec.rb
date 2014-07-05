@@ -18,7 +18,7 @@ describe "Expurrel" do
 
 
   it "should decode a url from bacn.me" do
-    e = Expurrel.new('http://bacn.me/xg4')
-    e.decode.should eql('http://www.jo.com')
+    e = Expurrel.new('http://bacn.me/i6vl')
+    e.decode.should eql('http://www.google.com')
   end
 end
